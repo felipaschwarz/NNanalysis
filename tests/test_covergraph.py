@@ -13,10 +13,9 @@ class TestCoverGraph(unittest.TestCase):
 
         # "Discrete Signal Processing on Meet/Join Lattices" Fig.1(a) REVERSED
         self.nodes2 = list(string.ascii_lowercase)[:8]
-        #self.edges2 = ['ba', 'ca', 'da', 'eb', 'fb', 'fc', 'fd', 'gd','he', 'hf']
-        self.edges2 = ['ab', 'ac', 'ad', 'be', 'bf', 'cf', 'df', 'dg','eh', 'fh'] # reversed
+        self.edges2 = ['ba', 'ca', 'da', 'eb', 'fb', 'fc', 'fd', 'gd','he', 'hf']
         self.G2 = CoverGraph(self.nodes2, self.edges2)
-        #self.G2.graph = self.G2.graph.reverse()
+        #self.G2 = self.G2.reverse()
 
     def test_inv_fourier_transform(self):
 
