@@ -2,7 +2,7 @@ import unittest
 import numpy as np
 import string
 
-from covergraph import CoverGraph
+from covergraph.covergraph import CoverGraph
 
 class TestCoverGraph(unittest.TestCase):
     def setUp(self):

@@ -9,10 +9,16 @@ class CoverGraph(nx.DiGraph):
         self.add_nodes_from(nodes)
         self.add_edges_from([tuple(e) for e in edges])
 
-    def inv_fourier_transform(self):
-        # TODO get inv_ fourier_matrix and compute transformation
-        return inv_fourier_matrix(self.graph)
+    def inv_fourier_transform(self, signals):
+        inv_F = inv_fourier_matrix(self)
+        inv_fourier_signals = inv_F @ signals
+        return inv_fourier_signals
 
-    def fourier_transform(self):
-        # TODO get fourier_matrix and compute transformation
-        return fourier_matrix(self.graph)
+    def fourier_transform(self, signals):
+        F = fourier_matrix(self)
+        fourier_signals = F @ signals
+        return fourier_signals
+
+    def set_node_attributes_from(self, signals, name):
+        nx.set_node_attributes(self, dict(zip(self.nodes, signals)), name)
+        return
