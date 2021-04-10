@@ -13,8 +13,6 @@ class TestHelpers(unittest.TestCase):
         self.G1.add_edges_from([tuple(e) for e in ['ab', 'ac', 'bd', 'be', 'bf', 'cd', 'ce', 'cf','dg', 'dh','eg', 'eh','fg', 'fh']])
 
         # "Discrete Signal Processing on Meet/Join Lattices" Fig.1(a) REVERSED
-        #self.edges2 = ['ba', 'ca', 'da', 'eb', 'fb', 'fc', 'fd', 'gd','he', 'hf']
-        #self.G2.graph = self.G2.graph.reverse()
         self.G2 = nx.DiGraph()
         self.G2.add_nodes_from(list(string.ascii_lowercase)[:8])
         self.G2.add_edges_from([tuple(e) for e in ['ba', 'ca', 'da', 'eb', 'fb', 'fc', 'fd', 'gd','he', 'hf']])

@@ -1,7 +1,8 @@
 import numpy as np
 import networkx as nx
 
-from covergraph.helpers import *
+#from covergraph.helpers import *
+from helpers import * # when testing
 
 class CoverGraph(nx.DiGraph):
     def __init__(self, nodes=[], edges=[]):
